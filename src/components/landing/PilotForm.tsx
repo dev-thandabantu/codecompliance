@@ -4,6 +4,8 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { CheckCircle2 } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "@/hooks/use-toast";
 
 interface FormData {
   fullName: string;
@@ -23,6 +25,7 @@ const PilotForm = forwardRef<HTMLElement>((_, ref) => {
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -34,13 +37,39 @@ const PilotForm = forwardRef<HTMLElement>((_, ref) => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    
-    console.log("Form submitted:", formData);
-    setIsSubmitting(false);
-    setIsSubmitted(true);
+    setError(null);
+
+    try {
+      const { error: submitError } = await supabase
+        .from("pilot_submissions")
+        .insert({
+          full_name: formData.fullName.trim(),
+          company: formData.company.trim(),
+          role: formData.role.trim(),
+          email: formData.email.trim().toLowerCase(),
+          design_codes: formData.designCodes.trim() || null,
+        });
+
+      if (submitError) {
+        throw submitError;
+      }
+
+      setIsSubmitted(true);
+      toast({
+        title: "Request submitted",
+        description: "We'll be in touch shortly.",
+      });
+    } catch (err) {
+      console.error("Submission error:", err);
+      setError("Something went wrong. Please try again.");
+      toast({
+        title: "Error",
+        description: "Failed to submit. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (isSubmitted) {
