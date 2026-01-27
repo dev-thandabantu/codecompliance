@@ -2,95 +2,113 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Engineering-grade design system - Clean, precise, credible */
 
 @layer base {
   :root {
+    /* Core palette - Neutral, professional, technical */
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 220 20% 14%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    /* Slate-tinted cards and surfaces */
+    --card: 210 20% 98%;
+    --card-foreground: 220 20% 14%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 220 20% 14%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Primary - Muted professional blue */
+    --primary: 215 65% 42%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Secondary - Subtle slate */
+    --secondary: 210 20% 96%;
+    --secondary-foreground: 220 20% 25%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted tones for less emphasis */
+    --muted: 210 15% 94%;
+    --muted-foreground: 215 14% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent - Slightly warmer blue for highlights */
+    --accent: 215 60% 96%;
+    --accent-foreground: 215 65% 35%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    /* Status colors */
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Borders and inputs - Subtle, precise */
+    --border: 214 20% 88%;
+    --input: 214 20% 88%;
+    --ring: 215 65% 42%;
 
     --radius: 0.5rem;
 
-    --sidebar-background: 0 0% 98%;
+    /* Custom tokens for this project */
+    --surface-elevated: 210 20% 99%;
+    --text-primary: 220 20% 14%;
+    --text-secondary: 215 14% 40%;
+    --text-tertiary: 215 12% 55%;
+    --divider: 214 20% 92%;
+    --code-bg: 215 25% 96%;
+    --highlight: 215 60% 94%;
 
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Sidebar tokens */
+    --sidebar-background: 210 20% 98%;
+    --sidebar-foreground: 220 20% 20%;
+    --sidebar-primary: 215 65% 42%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 215 60% 96%;
+    --sidebar-accent-foreground: 215 65% 35%;
+    --sidebar-border: 214 20% 90%;
+    --sidebar-ring: 215 65% 42%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 220 20% 8%;
+    --foreground: 210 20% 96%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 220 18% 11%;
+    --card-foreground: 210 20% 96%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 220 20% 8%;
+    --popover-foreground: 210 20% 96%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 215 70% 55%;
+    --primary-foreground: 220 20% 8%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 220 16% 16%;
+    --secondary-foreground: 210 20% 90%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 220 16% 16%;
+    --muted-foreground: 215 14% 55%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 220 16% 16%;
+    --accent-foreground: 210 20% 90%;
 
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 62% 45%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 220 16% 18%;
+    --input: 220 16% 18%;
+    --ring: 215 70% 55%;
+
+    --surface-elevated: 220 18% 12%;
+    --text-primary: 210 20% 96%;
+    --text-secondary: 215 14% 65%;
+    --text-tertiary: 215 12% 50%;
+    --divider: 220 16% 20%;
+    --code-bg: 220 18% 14%;
+    --highlight: 215 40% 20%;
+
+    --sidebar-background: 220 18% 10%;
+    --sidebar-foreground: 210 20% 90%;
+    --sidebar-primary: 215 70% 55%;
+    --sidebar-primary-foreground: 220 20% 8%;
+    --sidebar-accent: 220 16% 16%;
+    --sidebar-accent-foreground: 210 20% 90%;
+    --sidebar-border: 220 16% 18%;
+    --sidebar-ring: 215 70% 55%;
   }
 }
 
@@ -99,7 +117,130 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  /* Typography scale - Technical precision */
+  h1 {
+    @apply text-4xl font-semibold tracking-tight text-foreground md:text-5xl lg:text-6xl;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+  }
+
+  h2 {
+    @apply text-2xl font-semibold tracking-tight text-foreground md:text-3xl lg:text-4xl;
+    line-height: 1.15;
+    letter-spacing: -0.015em;
+  }
+
+  h3 {
+    @apply text-xl font-medium tracking-tight text-foreground md:text-2xl;
+    line-height: 1.2;
+  }
+
+  h4 {
+    @apply text-lg font-medium text-foreground;
+    line-height: 1.3;
+  }
+
+  p {
+    @apply leading-relaxed;
+  }
+}
+
+@layer components {
+  /* Section styling */
+  .section {
+    @apply py-16 md:py-24;
+  }
+
+  .section-alt {
+    @apply py-16 md:py-24 bg-card;
+  }
+
+  /* Container with consistent padding */
+  .container-narrow {
+    @apply mx-auto max-w-4xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .container-wide {
+    @apply mx-auto max-w-6xl px-4 sm:px-6 lg:px-8;
+  }
+
+  /* Feature card styling */
+  .feature-card {
+    @apply rounded-lg border border-border bg-background p-6 transition-colors hover:border-primary/20 hover:bg-accent/50;
+  }
+
+  /* Step indicator */
+  .step-number {
+    @apply flex h-8 w-8 items-center justify-center rounded-full bg-primary text-sm font-medium text-primary-foreground;
+  }
+
+  /* Code/technical styling */
+  .code-block {
+    @apply rounded-md bg-muted px-3 py-1.5 font-mono text-sm text-muted-foreground;
+  }
+
+  /* Form input styling */
+  .form-input {
+    @apply rounded-md border border-input bg-background px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20 transition-colors;
+  }
+
+  .form-label {
+    @apply text-sm font-medium text-foreground;
+  }
+
+  /* Illustration mockup styles */
+  .mockup-window {
+    @apply rounded-lg border border-border bg-background shadow-lg overflow-hidden;
+  }
+
+  .mockup-titlebar {
+    @apply flex items-center gap-2 border-b border-border bg-muted/50 px-4 py-3;
+  }
+
+  .mockup-dot {
+    @apply h-3 w-3 rounded-full;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .text-primary-color {
+    color: hsl(var(--text-primary));
+  }
+
+  .text-secondary-color {
+    color: hsl(var(--text-secondary));
+  }
+
+  .text-tertiary-color {
+    color: hsl(var(--text-tertiary));
+  }
+
+  .bg-elevated {
+    background-color: hsl(var(--surface-elevated));
+  }
+
+  .border-divider {
+    border-color: hsl(var(--divider));
+  }
+
+  .bg-highlight {
+    background-color: hsl(var(--highlight));
+  }
+
+  .bg-code {
+    background-color: hsl(var(--code-bg));
   }
 }
