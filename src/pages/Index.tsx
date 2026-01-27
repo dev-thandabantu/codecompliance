@@ -1,12 +1,32 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useRef } from "react";
+import Header from "@/components/landing/Header";
+import Hero from "@/components/landing/Hero";
+import Problem from "@/components/landing/Problem";
+import HowItWorks from "@/components/landing/HowItWorks";
+import Features from "@/components/landing/Features";
+import Audience from "@/components/landing/Audience";
+import PilotForm from "@/components/landing/PilotForm";
+import Footer from "@/components/landing/Footer";
 
 const Index = () => {
+  const formRef = useRef<HTMLElement>(null);
+
+  const scrollToForm = () => {
+    formRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background">
+      <Header onRequestAccess={scrollToForm} />
+      <main>
+        <Hero onRequestAccess={scrollToForm} />
+        <Problem />
+        <HowItWorks />
+        <Features />
+        <Audience />
+        <PilotForm ref={formRef} />
+      </main>
+      <Footer />
     </div>
   );
 };
