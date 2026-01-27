@@ -1,11 +1,17 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
+import { trackCtaClick } from "@/lib/analytics";
 
 interface HeroProps {
   onRequestAccess: () => void;
 }
 
 const Hero = ({ onRequestAccess }: HeroProps) => {
+  const handleRequestAccess = () => {
+    trackCtaClick("request_pilot_access", "hero");
+    onRequestAccess();
+  };
+
   return (
     <section className="section bg-background">
       <div className="container-wide">
@@ -27,7 +33,7 @@ const Hero = ({ onRequestAccess }: HeroProps) => {
               <Button 
                 variant="hero" 
                 size="xl" 
-                onClick={onRequestAccess}
+                onClick={handleRequestAccess}
                 className="group"
               >
                 Request pilot access

@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { CheckCircle2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
+import { trackFormSubmission, trackRoleSelection } from "@/lib/analytics";
 
 interface FormData {
   fullName: string;
@@ -32,6 +33,11 @@ const PilotForm = forwardRef<HTMLElement>((_, ref) => {
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
+
+    // Track role selection
+    if (name === "role" && value) {
+      trackRoleSelection(value);
+    }
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -40,6 +46,11 @@ const PilotForm = forwardRef<HTMLElement>((_, ref) => {
     setError(null);
 
     try {
+      // Track form submission with role
+      trackFormSubmission("pilot_form", {
+        role: formData.role,
+      });
+
       const { error: submitError } = await supabase
         .from("pilot_submissions")
         .insert({
