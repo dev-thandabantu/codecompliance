@@ -7,10 +7,10 @@ const Footer = () => {
             <div className="flex h-6 w-6 items-center justify-center rounded bg-primary">
               <span className="text-xs font-semibold text-primary-foreground">CC</span>
             </div>
-            <span className="text-sm text-muted-foreground">CodeCompliance</span>
+            <span className="text-sm text-muted-foreground">CodeCompass</span>
           </div>
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} CodeCompliance. All rights reserved.
+            © {new Date().getFullYear()} CodeCompass. All rights reserved.
           </p>
         </div>
       </div>

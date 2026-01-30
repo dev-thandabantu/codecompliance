@@ -10,7 +10,7 @@ const Header = ({ onRequestAccess }: HeaderProps) => {
       <div className="container-wide flex h-14 items-center justify-between">
         <div className="flex items-center gap-2">
           <div className="flex h-8 w-8 items-center justify-center rounded-md bg-primary">
-            <span className="text-sm font-semibold text-primary-foreground">CN</span>
+            <span className="text-sm font-semibold text-primary-foreground">CC</span>
           </div>
           <span className="font-medium text-foreground">CodeCompass</span>
         </div>
