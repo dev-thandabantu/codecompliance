@@ -91,9 +91,12 @@ const PilotForm = forwardRef<HTMLElement>((_, ref) => {
             <div className="mx-auto mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
               <CheckCircle2 className="h-6 w-6 text-primary" />
             </div>
-            <h3 className="mb-2">Request received</h3>
+            <h3 className="mb-2">Demo request received</h3>
             <p className="text-muted-foreground">
-              Thank you for your interest. We'll be in touch shortly to discuss pilot access.
+              Thank you for your interest. We'll be in touch shortly to book your demo.
+            </p>
+            <p className="mt-4 text-sm text-muted-foreground">
+              Limited 5 pilot spaces available.
             </p>
           </div>
         </div>
@@ -105,9 +108,12 @@ const PilotForm = forwardRef<HTMLElement>((_, ref) => {
     <section ref={ref} id="pilot-form" className="section-alt">
       <div className="container-narrow">
         <div className="mx-auto max-w-lg">
-          <h2 className="mb-4 text-center">Request pilot access</h2>
-          <p className="mb-8 text-center text-muted-foreground">
-            We're onboarding a small number of firms for early pilots.
+          <h2 className="mb-4 text-center">Get in touch</h2>
+          <p className="mb-2 text-center text-muted-foreground">
+            Free your team from the drudgery of searching through codes:
+          </p>
+          <p className="mb-8 text-center text-sm text-muted-foreground">
+            Fill out the form below to get a demo with our team.
           </p>
 
           <form onSubmit={handleSubmit} className="space-y-5 rounded-lg border border-border bg-background p-6 md:p-8">

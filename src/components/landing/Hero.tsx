@@ -19,12 +19,11 @@ const Hero = ({ onRequestAccess }: HeroProps) => {
           {/* Left: Copy */}
           <div className="max-w-xl">
             <h1 className="mb-6 text-balance">
-              Design code compliance.{" "}
-              <span className="text-primary">Instantly.</span>{" "}
-              <span className="text-muted-foreground">With sources.</span>
+              Navigate codes with{" "}
+              <span className="text-primary">absolute certainty</span>
             </h1>
             <p className="mb-4 text-lg text-secondary-foreground md:text-xl">
-              Ask design code questions — get cited answers you can trust.
+              Upload your AEC codes, chat with your documents, and verify every answer with direct, side-by-side PDF previews.
             </p>
             <p className="mb-8 text-muted-foreground">
               Built for engineering consultancies that need fast, defensible answers from building codes and specifications.
@@ -36,11 +35,11 @@ const Hero = ({ onRequestAccess }: HeroProps) => {
                 onClick={handleRequestAccess}
                 className="group"
               >
-                Request pilot access
+                Book a demo
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
               </Button>
               <p className="text-sm text-muted-foreground">
-                Pilot with limited firms · No training on your data
+                Limited 5 pilot spaces available
               </p>
             </div>
           </div>

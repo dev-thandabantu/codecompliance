@@ -2,16 +2,17 @@ import { CheckCircle2 } from "lucide-react";
 
 const Audience = () => {
   const audiences = [
-    "Structural and civil engineering consultancies",
-    "Multidisciplinary engineering firms",
+    "Multidisciplinary engineering consultancies",
+    "Contractors",
+    "Architectural firms",
   ];
 
   return (
     <section className="section">
       <div className="container-narrow">
-        <h2 className="mb-8 text-center">Who this is for</h2>
+        <h2 className="mb-4 text-center">Who is this for?</h2>
         <p className="mb-8 text-center text-muted-foreground">
-          This pilot is designed for:
+          This tool is designed for:
         </p>
 
         <div className="mx-auto max-w-md space-y-4">

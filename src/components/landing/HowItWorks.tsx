@@ -2,23 +2,23 @@ const HowItWorks = () => {
   const steps = [
     {
       number: 1,
-      title: "Select your jurisdiction and design context",
-      description: "Choose the relevant building codes and project parameters",
+      title: "Upload your standards and design codes",
+      description: "Import your AEC documents, standards, and specifications",
     },
     {
       number: 2,
-      title: "Ask a design code or specification question",
-      description: "Type your question in plain language, as you would ask a colleague",
+      title: "Chat with your documents",
+      description: "Type your questions in plain language as you would ask a colleague",
     },
     {
       number: 3,
       title: "Receive an answer with highlighted source clauses",
-      description: "Get a clear response with direct links to the original code sections",
+      description: "Get a clear view of where the references come from with a PDF previewer with highlighted sections",
     },
     {
       number: 4,
-      title: "Export requirements into your checklist or report",
-      description: "Integrate findings directly into your documentation workflow",
+      title: "Export requirements into a checklist or report",
+      description: "Navigation of codes always results in a to-do list for AEC professionals to implement",
     },
   ];
 
@@ -27,7 +27,7 @@ const HowItWorks = () => {
       <div className="container-narrow">
         <h2 className="mb-4 text-center">How it works</h2>
         <p className="mx-auto mb-12 max-w-xl text-center text-muted-foreground">
-          No black-box answers. Every output is traceable to the original code.
+          No black-box answers, every output is traceable to the original code without window switching.
         </p>
 
         <div className="relative">

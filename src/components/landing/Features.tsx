@@ -5,29 +5,29 @@ const Features = () => {
     {
       icon: Link2,
       title: "Source-linked answers",
-      description: "Every response is backed by the exact design code clause.",
+      description: "Every response is backed by the exact design code clause shown in a PDF previewer.",
     },
     {
       icon: Workflow,
-      title: "Follows real engineering workflows",
-      description: "Mirrors how engineers already interpret and apply codes.",
+      title: "Follows your existing workflows",
+      description: "Mirrors how AEC professionals already interpret and apply codes.",
     },
     {
       icon: ShieldCheck,
-      title: "No training on your queries",
-      description: "Your data and questions are not used to train models.",
+      title: "No training on your data or queries",
+      description: "Your data and queries are not used to train our agents.",
     },
     {
       icon: Building2,
-      title: "Designed for consultancies",
-      description: "Pilots, pricing, and access structured for professional teams.",
+      title: "Designed by and for the construction industry",
+      description: "Our team brings decades of experience working in the AEC industry.",
     },
   ];
 
   return (
     <section className="section-alt">
       <div className="container-wide">
-        <h2 className="mb-12 text-center">Built for professional accountability</h2>
+        <h2 className="mb-12 text-center">Built to give confidence in working with AI</h2>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {features.map((feature, index) => (

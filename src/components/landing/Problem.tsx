@@ -1,45 +1,56 @@
-import { Search, Copy, AlertCircle } from "lucide-react";
+import { Zap, GitBranch, Eye, Cpu } from "lucide-react";
 
 const Problem = () => {
-  const painPoints = [
+  const risks = [
     {
-      icon: Search,
-      text: "Searching through PDFs to find the relevant clause",
+      icon: Zap,
+      title: "Hallucinations create mistrust",
+      text: "PDF search with AI remains slow due to hallucinations that undermines confidence in the answers.",
     },
     {
-      icon: Copy,
-      text: "Copy-pasting text into ChatGPT and double-checking anyway",
+      icon: GitBranch,
+      title: "Reference switching ignored",
+      text: "Existing AI document software doesn't account for the switching between references that AEC professionals undertake.",
     },
     {
-      icon: AlertCircle,
-      text: "Worrying whether a requirement was missed or misinterpreted",
+      icon: Eye,
+      title: "Source verification is mandatory",
+      text: "AEC professionals will always need to view the source even if AI summaries have no hallucinations.",
+    },
+    {
+      icon: Cpu,
+      title: "Generic AI training",
+      text: "Existing AI agents are not trained with specific AEC context and workflows.",
     },
   ];
 
   return (
     <section className="section-alt">
-      <div className="container-narrow">
+      <div className="container-wide">
         <h2 className="mb-4 text-center text-balance">
-          Why design code compliance is still slow and risky
+          Why design code search is still slow and risky with AI
         </h2>
         <p className="mx-auto mb-12 max-w-2xl text-center text-muted-foreground">
-          Every engineer knows this workflow:
+          Every AEC professional knows this workflow
         </p>
 
-        <div className="grid gap-4 md:grid-cols-3">
-          {painPoints.map((point, index) => (
-            <div key={index} className="feature-card flex flex-col items-start gap-4">
-              <div className="rounded-lg bg-muted p-3">
-                <point.icon className="h-5 w-5 text-muted-foreground" />
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {risks.map((risk, index) => (
+            <div key={index} className="feature-card">
+              <div className="mb-4 rounded-lg bg-destructive/10 p-3 w-fit">
+                <risk.icon className="h-5 w-5 text-destructive" />
               </div>
-              <p className="text-secondary-foreground">{point.text}</p>
+              <h4 className="mb-2 text-foreground">{risk.title}</h4>
+              <p className="text-sm text-muted-foreground">{risk.text}</p>
             </div>
           ))}
         </div>
 
-        <p className="mt-12 text-center text-muted-foreground">
-          Compliance work is daily, unavoidable, and high-risk — yet poorly tooled.
-        </p>
+        <div className="mt-12 rounded-lg border border-border bg-background p-6 text-center">
+          <p className="text-muted-foreground">
+            <strong>The reality:</strong> Human-in-the-loop will always be needed and our tools need to reflect that.
+          </p>
+        </div>
       </div>
     </section>
   );
