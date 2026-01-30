@@ -12,7 +12,7 @@ const Header = ({ onRequestAccess }: HeaderProps) => {
           <div className="flex h-8 w-8 items-center justify-center rounded-md bg-primary">
             <span className="text-sm font-semibold text-primary-foreground">CN</span>
           </div>
-          <span className="font-medium text-foreground">CodeNav</span>
+          <span className="font-medium text-foreground">CodeCompass</span>
         </div>
         <Button variant="default" size="sm" onClick={onRequestAccess}>
           Book a demo

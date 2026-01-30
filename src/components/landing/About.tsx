@@ -21,7 +21,7 @@ const About = () => {
       <div className="container-narrow">
         <h2 className="mb-4 text-center">About us</h2>
         <p className="mx-auto mb-12 max-w-2xl text-center text-muted-foreground">
-          CodeNav is built by engineers, for engineers. Our team brings deep expertise across AI, full-stack development, and the AEC industry.
+          CodeCompass is built by engineers, for engineers. Our team brings deep expertise across AI, full-stack development, and the AEC industry.
         </p>
 
         <div className="grid gap-6 md:grid-cols-3">
