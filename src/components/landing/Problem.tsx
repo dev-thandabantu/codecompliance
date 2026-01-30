@@ -4,8 +4,8 @@ const Problem = () => {
   const risks = [
     {
       icon: Zap,
-      title: "Hallucinations create mistrust",
-      text: "PDF search with AI remains slow due to hallucinations that undermines confidence in the answers.",
+      title: "AI mistakes create mistrust",
+      text: "PDF search with AI remains slow due to AI mistakes that undermines confidence in the answers.",
     },
     {
       icon: GitBranch,
@@ -15,7 +15,7 @@ const Problem = () => {
     {
       icon: Eye,
       title: "Source verification is mandatory",
-      text: "AEC professionals will always need to view the source even if AI summaries have no hallucinations.",
+      text: "AEC professionals will always need to view the source even if AI summaries are accurate.",
     },
     {
       icon: Cpu,

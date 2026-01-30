@@ -202,7 +202,7 @@ const PilotForm = forwardRef<HTMLElement>((_, ref) => {
               className="w-full"
               disabled={isSubmitting}
             >
-              {isSubmitting ? "Submitting..." : "Request pilot access"}
+              {isSubmitting ? "Submitting..." : "Book a demo"}
             </Button>
           </form>
         </div>
