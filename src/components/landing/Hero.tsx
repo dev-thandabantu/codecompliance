@@ -38,66 +38,16 @@ const Hero = ({ onRequestAccess }: HeroProps) => {
                 Book a demo
                 <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
               </Button>
-              <p className="text-sm text-muted-foreground">
-                Limited 5 pilot spaces available
-              </p>
             </div>
           </div>
 
           {/* Right: Product Illustration */}
-          <div className="mockup-window">
-            <div className="mockup-titlebar">
-              <div className="mockup-dot bg-destructive/60" />
-              <div className="mockup-dot bg-yellow-400/60" />
-              <div className="mockup-dot bg-green-500/60" />
-              <span className="ml-3 text-xs text-muted-foreground">Code Compliance Tool</span>
-            </div>
-            <div className="grid gap-0 lg:grid-cols-2">
-              {/* PDF Panel */}
-              <div className="border-r border-border p-4">
-                <div className="mb-3 flex items-center gap-2">
-                  <div className="rounded bg-destructive/10 px-2 py-0.5 text-xs font-medium text-destructive">
-                    PDF
-                  </div>
-                  <span className="text-xs text-muted-foreground">AS 3600 — Concrete Structures</span>
-                </div>
-                <div className="space-y-2 text-xs">
-                  <p className="text-muted-foreground">Section 8.1.6 — Cover requirements</p>
-                  <div className="rounded bg-highlight p-2 border-l-2 border-primary">
-                    <p className="font-medium text-foreground">8.1.6.1 Minimum cover</p>
-                    <p className="mt-1 text-muted-foreground">
-                      The cover to reinforcement shall be not less than the values given in Table 4.10.3.2...
-                    </p>
-                  </div>
-                  <p className="text-muted-foreground">
-                    For exposure classification B1, the minimum cover shall be 40mm for beams and 25mm for slabs...
-                  </p>
-                </div>
-              </div>
-
-              {/* Chat Panel */}
-              <div className="p-4">
-                <div className="mb-4">
-                  <p className="mb-2 text-xs text-muted-foreground">Your question</p>
-                  <div className="rounded-lg bg-secondary p-3">
-                    <p className="text-sm text-secondary-foreground">
-                      What is the minimum cover for reinforcement in a B1 exposure slab?
-                    </p>
-                  </div>
-                </div>
-                <div>
-                  <p className="mb-2 text-xs text-muted-foreground">Response</p>
-                  <div className="rounded-lg border border-border bg-background p-3">
-                    <p className="text-sm text-foreground">
-                      For exposure classification B1, the minimum cover for slabs is <strong>25mm</strong>.
-                    </p>
-                    <p className="mt-2 text-xs text-primary">
-                      Source: AS 3600, Section 8.1.6.1, Table 4.10.3.2
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+          <div className="rounded-lg overflow-hidden border border-border shadow-xl scale-140 origin-top-left">
+            <img
+              src="/prototype-demo.gif"
+              alt="Project Machine prototype demo - Code Compliance Tool showing PDF and chat interface"
+              className="w-full h-auto"
+            />
           </div>
         </div>
       </div>
