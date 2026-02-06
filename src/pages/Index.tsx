@@ -4,7 +4,6 @@ import Hero from "@/components/landing/Hero";
 import Problem from "@/components/landing/Problem";
 import HowItWorks from "@/components/landing/HowItWorks";
 import Features from "@/components/landing/Features";
-import Audience from "@/components/landing/Audience";
 import About from "@/components/landing/About";
 import PilotForm from "@/components/landing/PilotForm";
 import Footer from "@/components/landing/Footer";
@@ -24,7 +23,6 @@ const Index = () => {
         <Problem />
         <HowItWorks />
         <Features />
-        <Audience />
         <About />
         <PilotForm ref={formRef} />
       </main>
