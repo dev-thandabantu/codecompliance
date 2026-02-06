@@ -9,10 +9,8 @@ const Header = ({ onRequestAccess }: HeaderProps) => {
     <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
       <div className="container-wide flex h-14 items-center justify-between">
         <div className="flex items-center gap-2">
-          <div className="flex h-8 w-8 items-center justify-center rounded-md bg-primary">
-            <span className="text-sm font-semibold text-primary-foreground">CC</span>
-          </div>
-          <span className="font-medium text-foreground">CodeCompass</span>
+            <img src="/logo.svg" alt="Project Machine" className="h-10 w-10" />
+          <span className="font-medium text-foreground">Project Machine</span>
         </div>
         <Button variant="default" size="sm" onClick={onRequestAccess}>
           Book a demo
